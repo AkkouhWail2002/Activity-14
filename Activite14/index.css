@@ -1,0 +1,171 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #07031c;
+}
+body #box {
+  border: 2px #0ef solid;
+  background-color: #0a0b33;
+  width: 750px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 10px 1px #0ef;
+          box-shadow: 0px 0px 10px 1px #0ef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+body #box #dark {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#00282b), to(#0ef));
+  background-image: linear-gradient(to top, #00282b, #0ef);
+  position: absolute;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  left: 40%;
+  top: -20%;
+  border: 2px #0ef solid;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+body #box #sign_in, body #box #sign_up {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3%;
+  visibility: visible;
+}
+body #box #sign_in form, body #box #sign_up form {
+  width: 40%;
+  height: 100%;
+}
+body #box #sign_in form h1, body #box #sign_up form h1 {
+  text-transform: capitalize;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10%;
+}
+body #box #sign_in form .user, body #box #sign_up form .user, body #box #sign_up form .email, body #box #sign_in form .pass, body #box #sign_up form .pass {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 12%;
+  position: relative;
+  border-bottom: 2px #fff solid;
+}
+body #box #sign_in form input, body #box #sign_up form input {
+  color: #fff;
+}
+body #box #sign_in form input:not([type=submit]), body #box #sign_up form input:not([type=submit]) {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-left: 2%;
+}
+body #box #sign_in form input:not([type=submit])::-webkit-input-placeholder, body #box #sign_up form input:not([type=submit])::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3803921569);
+  text-transform: capitalize;
+}
+body #box #sign_in form input:not([type=submit])::-moz-placeholder, body #box #sign_up form input:not([type=submit])::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3803921569);
+  text-transform: capitalize;
+}
+body #box #sign_in form input:not([type=submit]):-ms-input-placeholder, body #box #sign_up form input:not([type=submit]):-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3803921569);
+  text-transform: capitalize;
+}
+body #box #sign_in form input:not([type=submit])::-ms-input-placeholder, body #box #sign_up form input:not([type=submit])::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3803921569);
+  text-transform: capitalize;
+}
+body #box #sign_in form input:not([type=submit])::placeholder, body #box #sign_up form input:not([type=submit])::placeholder {
+  color: rgba(255, 255, 255, 0.3803921569);
+  text-transform: capitalize;
+}
+body #box #sign_in form input[type=submit], body #box #sign_up form input[type=submit] {
+  margin-bottom: 2%;
+  width: 100%;
+  height: 13.5%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#001a1c), to(#0ef));
+  background-image: linear-gradient(to top, #001a1c, #0ef);
+  border: 2px #0ef solid;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+body #box #sign_in form input[type=submit]:hover, body #box #sign_up form input[type=submit]:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#001a1c), to(#0ef));
+  background-image: linear-gradient(to bottom, #001a1c, #0ef);
+}
+body #box #sign_in form img, body #box #sign_up form img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+body #box #sign_in form p, body #box #sign_up form p {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 2%;
+  font-size: 15px;
+  color: #fff;
+}
+body #box #sign_in form p span, body #box #sign_up form p span {
+  cursor: pointer;
+  font-weight: bold;
+  color: #0ef;
+}
+body #box #sign_in .txt, body #box #sign_up .txt {
+  width: 40%;
+  height: 100%;
+  text-align: left;
+  color: #fff;
+}
+body #box #sign_in .txt h1, body #box #sign_up .txt h1 {
+  margin-bottom: 5%;
+}
+body #box #sign_in .txt p, body #box #sign_up .txt p {
+  line-height: 1.5;
+}
+body #box #sign_up {
+  visibility: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+body #box #sign_up form .user, body #box #sign_up form .email, body #box #sign_up form .pass {
+  margin-bottom: 5%;
+}

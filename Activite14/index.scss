@@ -1,0 +1,150 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #07031c;
+    #box{
+        border: 2px #0ef solid;
+        background-color: #0a0b33;
+        width: 750px;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0px 0px 10px 1px #0ef;
+        border-radius: 10px;
+        overflow: hidden;
+        #dark{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top,#00282b,#0ef);
+            position: absolute;
+            transform: rotate(50deg);
+            left: 40%;
+            top: -20%;
+            border: 2px #0ef solid;
+            transition-duration: 1s;
+        }
+
+        #sign_in{
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            left: 0%;
+            top: 0%;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3%;
+            visibility: visible;
+            form{
+                width: 40%;
+                height: 100%;
+                h1{
+                    text-transform: capitalize;
+                    font-size: 35px;
+                    color: #fff;
+                    text-align: center;
+                    margin-bottom: 10%;
+                }
+                .user{
+                    width: 100%;
+                    height: 15%;
+                    margin-bottom: 12%;
+                    position: relative;
+                    border-bottom: 2px #fff solid;
+
+                    
+                }
+                .pass{
+                    @extend .user;
+                }
+                input{
+                    color: #fff;
+                    &:not([type="submit"]){
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        border: none;
+                        background-color: transparent;
+                        padding-left: 2%;
+                        &::placeholder{
+                            color: #ffffff61;
+                            text-transform: capitalize;
+                        }
+                    }
+                    &[type="submit"]{
+                        margin-bottom: 2%;
+                        width: 100%;
+                        height: 13.5%;
+                        background-image: linear-gradient(to top,#001a1c,#0ef);
+                        border: 2px #0ef solid;
+                        border-radius: 20px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 13.5px;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-image: linear-gradient(to bottom,#001a1c,#0ef);
+                        }
+                    }
+                }
+                img{
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    right: 2%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                p{
+                    text-align: center;
+                    text-transform: capitalize;
+                    margin-top: 2%;
+                    font-size: 15px;
+                    color: #fff;
+                    span{
+                        cursor: pointer;
+                        font-weight: bold;
+                        color: #0ef;
+                    }
+                }
+            }
+            .txt{
+                width: 40%;
+                height: 100%;
+                text-align: left;
+                color: #fff;
+                h1{
+                    margin-bottom: 5%
+                }
+                p{
+                    line-height: 1.5;
+                }
+            }
+        }
+        #sign_up{
+            @extend #sign_in;
+            visibility: hidden;
+            flex-direction: row-reverse;
+            form{
+
+                .user{
+                    margin-bottom: 5%;
+                }
+                .email{
+                    @extend .user;
+                }
+                
+            }
+            
+        }
+    }
+}
